@@ -1,0 +1,151 @@
+Date: 09/01/2024
+Git
+  -Learnt about Version Control Systems(VCS)
+    -Centralized
+    -Distributed
+  -Learnt git commands
+  -Implemented git commands using github and vscode
+
+Git Commands
+  git config --global user.name "<username>"
+  git config --global user.email "<email>"
+  git config --list
+  git clone <link>
+  git status
+  git add <filename>
+  git commit -m "<message>"
+  git push <remoterepo(origin)> <branch> [ git push -u origin main ]
+  git init
+  git remote add origin <link>
+  git remote -v
+  git branch
+  git branch -M main (to rename branch)
+  git checkout <branchname>
+  git checkout -b <newbranchname>
+  git branch -d <branchname>
+  git pull <remoterepo(origin)> <branch> 
+  git log (to track history)
+
+Types of status in git
+  untracked files 
+  modified files
+  staged files
+  unmodified files
+
+Git branches
+  -master is the original branch
+  -used for adding features
+  -can be merged
+  -merge conflict might occur when git cannot automatically resolve differences in code between two commits
+  
+To merge branches in  Git
+  1. git diff <branchname>
+     git merge <branchname> (merges <branchname> to current branch)
+  2. Create a PR(pull request)
+
+Undoing changes in Git
+  1. Staged changes
+       git reset <filename>
+       git reset
+  2. Commited changes (for one commit)
+       git reset HEAD~1
+  3. commited changes (for many commits)
+       git reset <commit-hash>
+       git reset --hard <commit-hash> (changes in vs code too)
+
+Fork in Github
+  -rough copy of a project
+  
+
+
+Date:10/01/2024
+C#
+  -Access specifiers in C# https://www.geeksforgeeks.org/access-modifiers-in-c-sharp/
+  -public, private, internal(namespace/assembly), protected, protected internal, private protected
+  -OOPs
+
+Date: 11/01/2024
+C#
+  -Library Management System
+
+Date: 12/01/2024
+C# and Github
+
+
+
+Interfaces
+  -Properties
+  -Methods
+  -implicitly abstract
+
+
+Interfaces vs Abstract Class
+
+While both abstract classes and interfaces in object-oriented programming provide a way to achieve abstraction and define contracts for derived classes, 
+there are key differences between them.
+
+Multiple Inheritance:
+
+Interfaces support multiple inheritance, meaning a class can implement multiple interfaces. This allows a class to inherit behavior from multiple sources.
+Abstract classes, on the other hand, support single inheritance. A class can inherit from only one abstract class.
+Implementation:
+
+Interfaces only declare method signatures without providing any implementation. Classes implementing interfaces must provide their own implementation.
+Abstract classes can have both abstract (unimplemented) and concrete (implemented) methods. Derived classes may choose to override or extend the abstract methods.
+Access Modifiers:
+
+Interface members are implicitly public and abstract. 
+In other words, all methods in an interface are assumed to be public and abstract, and members cannot have access modifiers.
+Abstract classes can have various access modifiers for their members, allowing more control over the visibility of methods and fields.
+Choosing between an abstract class and an interface depends on the specific requirements of your design.
+If you need multiple inheritance or want to define a contract without providing any implementation, interfaces are more appropriate. 
+If you want to provide a common base implementation along with a contract, an abstract class might be the better choice. 
+Often, a combination of both is used in more complex designs.
+
+
+Reference-type variable vs value-type variable
+
+== checks values for value-type, whereas memory location for reference-type
+
+Function overriding - virutal -> override
+
+Strings: Immutable, referene type, == in strings checks values
+
+
+
+
+ASP.NET Core MVC
+
+-tag helpers '@'
+
+
+Schema: Helps google identify the entities
+
+Database Connection String: 
+"ConnectionStrings": {
+  "DefaultConnection": "Server:MSI-C317\\SQLEXPRESS<ServerName>;Database=Bulky<DatabaseName>;Trusted_Connection:True;"
+}
+
+Adding migration
+add-migration <migrationName>
+
+To undo the above action
+remove-migration
+
+To push migration
+update-database
+
+RESTful API:
+1. Uniform interface
+2. Client server
+3. Stateless
+4. Cacheable
+5. Layered system - (MVC layers)
+6. Code on demand
+
+Resourse     Verb    Result
+/Students    GET     Gets list of students
+/Students/1  GET     Gets student with id=1
+/Students    POST    Creates a new student
+/Students/1  PUT     Updates student with id=1
+/Students/1  DELETE  Deletes student with id=1
